@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú Principal</title> 
+    <link rel="stylesheet" href="css/principal.css">  
+
+    <script type="text/javascript">
+        function muestraOculta(id) {
+          var elemento = document.getElementById('div_'+id);
+          var enlace = document.getElementById('enlace_'+id);
+             
+          if (elemento.style.display == "") {
+                elemento.style.display = "block";
+                enlace.innerHTML = 'Ocultar Info';
+          } else if(elemento.style.display == "block") {
+                elemento.style.display = "none";
+                enlace.innerHTML = 'Información';
+          } else {
+                elemento.style.display = "block";
+                enlace.innerHTML = 'Ocultar Info';
+          }
+        }
+    </script>
+
+</head>
+<body>
+
+
+    <header class="encabezado inicio">
+        <div class="contenedor contenido-header">
+            <div class="barra">
+
+                <img src="img/esfera.gif" alt="Cruz" width="50px" height="50px">
+                
+                <div class="titulo">
+                    <h1 class="centrar-texto color">Repositorio de Actividades</h1> 
+                </div>
+                
+                <img src="img/esfera.gif" alt="Cruz" width="50px" height="50px">
+            </div>
+            
+            <h3 class="autor centrar-texto color">Por: Rojas Dominguez Mariano</h3> 
+        </div> <!-- Contenedor -->
+    </header>
+
+    <main class="seccion contenedor">
+        <h2 class="centrar-texto">Actividades</h2>
+
+        <div class="contenedor-anuncios">
+            
+            <a href="T01_ParImpar/ParImpar.html">
+                <div class="anuncio">
+                    <img src="img/par_impar.gif" alt="calculadora" height="120px" width="120px">
+                    <div class="contenido-anuncio">
+                        <h5>T01 ParImpar</h5>
+                        <p>Mostrar el resultado (si es par o impar) en una ventana emergente</p>
+                        <a href="#"></a>
+                    </div>
+                </div>
+            </a>
+
+            <a href="T02_Conversion/convertir.html">
+                <div class="anuncio">
+                    <img src="img/conversion.gif" alt="rojas" height="120px" width="120px">
+                    <div class="contenido-anuncio">
+                        <h5>T02 Conversion</h5>
+                        <p>Conversión de un numero a Binario o Hexadecimal e imprimir el resultado</p>
+                        <a href="#"></a>
+                    </div>
+                </div>
+            </a>
+
+            <a href="T03_Ventanas/principal.html">
+                <div class="anuncio">
+                    <img src="img/ventanas.gif" alt="Omid" height="120px" width="120px">
+                    <div class="contenido-anuncio">
+                        <h5>T03 Ventanas</h5>
+                        <p>Hacer que al presionar un botón (Binario o Hexadecimal), aparezca una nueva ventana donde se lleve a cabo la conversión de los números.</p>
+                        <a href="#"></a>
+                    </div>
+                </div>
+            </a>
+
+            <a href="T04_ExamenColores/ex_multiplicar.html">
+                <div class="anuncio">
+                    <img src="img/examen.jpg" alt="Gonzalo" height="120px" width="120px">
+                    <div class="contenido-anuncio">
+                        <h5>T04 ExamenColores</h5>
+                        <p>Señalar las respuestas correctas con color “Verde” y las incorrectas con color “Rojo”</p>
+                        <a href="#"></a>
+                    </div>
+                </div>
+            </a>
+
+            <a href="T05_ZodiacoDiv/Zodiaco.html">
+                <div class="anuncio">
+                    <img src="img/zodiaco.jpg" alt="Gonzalo" height="120px" width="120px">
+                    <div class="contenido-anuncio">
+                        <h5>T05 ZodiacoDiv</h5>
+                        <p>Eliminar el Div que se genera al buscar una nueva fecha en el programa Zodiaco</p>
+                        <a href="#"></a>
+                    </div>
+                </div>
+            </a>
+
+            <a href="T06_MoverEstadisticas/MoverEstadisticas.html">
+                <div class="anuncio">
+                    <img src="img/estadistica.jpg" alt="Gonzalo" height="120px" width="120px">
+                    <div class="contenido-anuncio">
+                        <h5>T06 MoverEstadisticas</h5>
+                        <p>Mover el cuadro de estadísticas de la parte superior de la pagina a la parte inferior</p>
+                        <a href="#"></a>
+                    </div>
+                </div>
+            </a>
+
+            <a href="T07_ColorParrafo/ParrafosColores.html">
+                <div class="anuncio">
+                    <img src="img/parrafos.jpg" alt="Gonzalo" height="120px" width="120px">
+                    <div class="contenido-anuncio">
+                        <h5>T07 ColorParrafo</h5>
+                        <p>Cambiar el color del texto al presiona “Ocultar Texto”</p>
+                        <a href="#"></a>
+                    </div>
+                </div>
+            </a>
+
+            <a href="T08_AdivinaNumeros/AdivinaNumero.html">
+                <div class="anuncio">
+                    <img src="img/adivina.gif" alt="Gonzalo" height="120px" width="120px">
+                    <div class="contenido-anuncio">
+                        <h5>T08 AdivinaNumeros</h5>
+                        <p>Mostrar los resultados en un cuadro de un color distinto al de fondo.</p>
+                        <a href="#"></a>
+                    </div>
+                </div>
+            </a>
+
+        </div>
+    </main>
+
+    <footer class="site-footer seccion">
+        <div class="contenedor contenedor-footer">
+            <p class="copyright">Rojas Dominguez Mariano - Derechos Reservados 2021 &copy;</p>
+        </div>
+    </footer>
+
+</body>
+</html>
