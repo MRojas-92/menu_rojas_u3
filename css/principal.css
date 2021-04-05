@@ -147,11 +147,12 @@ p {
 
 /* Navegacion */
 .navegacion a {
-    color: #ffffff;
+    color: #FFFF00;
     text-decoration: none;
     font-size: 18px; /* 1.8rem = 18px */
     /*font-family: 'Times New Roman', Times, serif;*/
     display: block;
+    padding-left: 20px;
 }
 @media (min-width: 768px) {
     .navegacion a {
