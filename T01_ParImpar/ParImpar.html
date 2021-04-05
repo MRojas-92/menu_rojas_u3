@@ -1,0 +1,52 @@
+<!DOCTYPE >
+<html>
+<head>
+   <meta charset="UTF-8">
+   <title>Funciones básicas</title>  
+
+</head>  
+<style>
+   body {
+      background-color: #81DAF5;
+   }
+   h1 {
+      padding: 15px;
+      background-color: #848484;
+      text-align: center;
+   }
+   p {
+      font-style: italic;
+   }
+   .forma {
+      padding-top: 5px;
+   }
+   .opera {
+      font-weight: bold;
+      margin-left: 5%;
+   }
+
+</style>
+<body>
+   <p>TAREA:Investigar como hacer para enviar el valor de input text a la funcion esPar (COMPLETADA)</p>
+   <h1>Programa que verifica si un n&uacute;mero es par</h1>
+   <form class="forma">
+      <label class="opera">Introduce el numero</label>
+      <input type="text" id="numero" value="">
+      <button type="button" onclick="esPar(numero)">Verificar</button>
+   </form>
+
+   <script type="text/javascript">
+
+      function esPar(numero){
+         num = parseInt(document.getElementById("numero").value);
+         var resultado = parImpar(numero);
+         alert("El número "+parseInt(document.getElementById("numero").value)+" es "+resultado);  
+      }
+
+      function parImpar(numero) {
+         if(numero % 2 == 0)  return "par";
+         else return "impar";
+      }
+   </script>
+</body>
+</html>

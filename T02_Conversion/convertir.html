@@ -1,0 +1,100 @@
+<!DOCTYPE >
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Binario y Hexadecimal</title>  
+</head>  
+<style>
+    body {
+       background-color: #A9F5A9;
+    }
+    h1 {
+       padding: 15px;
+       background-color: #848484;
+       text-align: center;
+    }
+    p {
+        background-color: #fff;
+    }
+    .forma {
+       padding-top: 5px;
+    }
+    .opera {
+       font-weight: bold;
+       margin-left: 5%;
+    }
+ 
+ </style>
+<body>
+
+  <h1>Programa que convierte un decimal en binario o hexadecimal</h1>
+    <form >
+        <label class="opera">Introduce el numero</label>
+        <input type="text"   id="num" name="numero" value="">
+        <button type="button" onclick="convierte(num.value, 2)">Binario</button>
+        <button type="button" onclick="convierte(num.value, 16)">Hexadecimal</button>
+        <!--
+        <button type="button" onclick="esPar(numero.value)">Verificar</button>
+        -->
+        <button type="button" onclick="limpiar()">Limpiar Todos</button>
+    </form>
+    <br>
+
+    <script type="text/javascript">
+
+        function limpiar(){
+            lista=document.querySelectorAll('p');
+            if(lista.length!=0){
+                i=lista.length-1;  // posiciona en el último párrafo creado
+                while(i>-1)
+                    lista[i].parentNode.removeChild(lista[i--]);
+            }
+            else alert("No hay p´rrafos a eliminar");
+        }
+
+        function convierte(numero,base){
+            if(base < 16){
+                var resultado = abinario(numero);
+                concepto ='Binario';
+            } else {
+                var resultado = ahexadec(numero);
+                concepto ='Hexadecimal';
+            }
+            parrafo = document.createElement("p");
+            contenido = document.createTextNode("El número "+numero+" en "+concepto+" es: "+resultado);  
+            parrafo.appendChild(contenido);
+            document.body.appendChild(parrafo);
+            document.getElementById("num").value="";
+        }
+
+        function abinario(numero) {
+            var texto;
+            var num;
+                while(numero>0){
+                    res=numero%2;
+                    numero=(numero-res)/2;
+                    texto=res.toString()+texto;
+                }
+                num = parseInt(texto);
+                return num;
+        }
+
+        function ahexadec(numero){
+            let dato=numero;
+            let dig=0;
+            let hexadecimal="";
+            digitos =['0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F'];
+                if (numero != 0)
+                while (numero > 0) {
+                    dig = numero % 16;
+                    dig=Math.trunc(dig);
+                    hexadecimal = digitos[dig]+hexadecimal; 
+                    numero = numero / 16;
+                    numero=Math.trunc(numero);
+                    console.log(numero);
+                }
+                return hexadecimal;
+            }
+    </script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="PQG">
+    <meta name="keywords" content="Conversor, binario, hexadecimal">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor binario y hexadecimal</title>
+</head>
+<style>
+    body {
+       background-color: #A9F5A9;
+    }
+    h1 {
+       padding: 15px;
+       background-color: #848484;
+       text-align: center;
+    }
+    p {
+        background-color: #fff;
+    }
+    .forma {
+       padding-top: 5px;
+    }
+    .opera {
+       font-weight: bold;
+       margin-left: 5%;
+    }
+    .cuadro {
+        border: 1px solid;
+        padding: 15px;
+        width: 30%;
+        margin-left: 33.33%;
+        background-color: #F7D358;
+    }
+</style>
+<body>
+    <header>
+        <h1>Pagina principal</h1>
+    </header>
+    <div class="cuadro">
+        <form>
+        <h2>Convertir n&uacute;meros decimales a...</h2>
+        <button type="button" id="bin" onclick="ventana_binario()">Binario</button>
+        <button type="button" id="hex" onclick="ventana_hexadecimal()">Hexadecimal</button>
+        </form>
+    </div>
+
+    <script>
+        function ventana_binario(){
+			window.open('a_binario.html','','toolbar=no, status=no, resizable');
+		}
+        function ventana_hexadecimal(){
+            window.open('a_hexadecimal.html','','toolbar=no, status=no, resizable');
+        }
+
+    </script>
+</body>
+</html>

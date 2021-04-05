@@ -1,0 +1,103 @@
+<!DOCTYPE>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<title>Muestra Oculta parrafos</title>
+
+<script type="text/javascript">
+function muestraOculta(id) {
+  var elemento = document.getElementById('contenidos_'+id);
+  var enlace = document.getElementById('enlace_'+id);
+
+  switch(id){
+    case '1': document.getElementById('div_1').style="background-color: #85C1E9;"; break;
+    case '2': document.getElementById('div_2').style="background-color: #7DCEA0;"; break;
+    case '3': document.getElementById('div_3').style="background-color: #F4D03F;"; break;
+  }
+
+  if(elemento.style.display == "" || elemento.style.display == "block") {
+    elemento.style.display = "none";
+    enlace.innerHTML = 'Mostrar contenidos';
+  }
+  else {
+    elemento.style.display = "block";
+    enlace.innerHTML = 'Ocultar contenidos';
+  }
+}
+
+</script>
+</head>
+<style>
+  body {
+     background-color: #E6E6E6;
+  }
+  h1 {
+     padding: 15px;
+     background-color: #848484;
+     text-align: center;
+  }
+  .forma {
+     padding-top: 5px;
+  }
+  .opera {
+     font-weight: bold;
+     margin-left: 5%;
+  }
+  .cuadro {
+      border: 1px solid;
+      padding: 15px;
+      width: 30%;
+      margin-left: 33.33%;
+      background-color: #F7D358;
+  }
+</style>
+<body>
+  <h1>Cambio de Color de Parrafos</h1>
+<div id="div_1">
+<p id="contenidos_1">[1] Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+  Sed mattis enim vitae orci. Phasellus libero. Maecenas nisl arcu, consequat congue,
+  commodo nec, commodo ultricies, turpis.
+  Quisque sapien nunc, posuere vitae, rutrum et, luctus at, pede.
+  Pellentesque massa ante, ornare id, aliquam vitae, ultrices porttitor, pede.
+  Nullam sit amet nisl elementum elit convallis malesuada. Phasellus magna sem, semper
+  quis, faucibus ut, rhoncus non, mi. Duis pellentesque, felis eu adipiscing
+  ullamcorper, odio urna consequat arcu, at posuere ante quam non dolor.
+ </p>
+</div>
+  <a id="enlace_1" href="#" onclick="muestraOculta('1'); return false;">
+    Ocultar contenidos
+  </a>
+
+<br/>
+
+<div id="div_2">
+  <p id="contenidos_2">[2] Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+    Sed mattis enim vitae orci. Phasellus libero. Maecenas nisl arcu, consequat congue, commodo nec,
+    commodo ultricies, turpis. Quisque sapien nunc, posuere vitae, rutrum et, luctus at, pede.
+    Pellentesque massa ante, ornare id, aliquam vitae, ultrices porttitor, pede. Nullam sit amet
+    nisl elementum elit convallis malesuada. Phasellus magna sem, semper quis, faucibus ut, rhoncus non,
+    mi. Duis pellentesque, felis eu adipiscing ullamcorper, odio urna consequat arcu, at posuere ante
+    quam non dolor. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Duis scelerisque.
+  </p>
+</div>
+<a id="enlace_2" href="#" onclick="muestraOculta('2'); return false;">
+  Ocultar contenidos
+</a>
+
+<br/>
+<div id="div_3">
+<p id="contenidos_3">[3] Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed mattis enim vitae
+  rci. Phasellus libero. Maecenas nisl arcu, consequat congue, commodo nec, commodo ultricies, turpis.
+  Quisque sapien nunc, posuere vitae, rutrum et, luctus at, pede. Pellentesque massa ante, ornare id,
+  aliquam vitae, ultrices porttitor, pede. Nullam sit amet nisl elementum elit convallis malesuada.
+  Phasellus magna sem, semper quis, faucibus ut, rhoncus non, mi. Duis pellentesque, felis eu adipiscing
+  ullamcorper, odio urna consequat arcu, at posuere ante quam non dolor. Lorem ipsum dolor sit amet,
+  consectetuer adipiscing elit. Duis scelerisque.
+</p>
+</div>
+<a id="enlace_3" href="#" onclick="muestraOculta('3'); return false;">
+  Ocultar contenidos
+</a>
+
+</body>
+</html>

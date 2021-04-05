@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <meta charset="UTF-8">
+    <meta name="description" content="PQG">
+    <meta name="keywords" content="Conversor, binario">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pantalla binario</title>  
+</head>  
+<style>
+    body {
+       background-color: #CEECF5;
+    }
+    h1 {
+       padding: 15px;
+       background-color: #848484;
+       text-align: center;
+    }
+    p {
+        background-color: #fff;
+    }
+    .forma {
+       padding-top: 5px;
+    }
+    .opera {
+       font-weight: bold;
+       margin-left: 5%;
+    }
+</style>
+<body>
+    <header>
+        <h1>N&uacute;meros decimales a binario</h1>
+    </header>
+   
+  <div id="cuadro_binario">
+    <h2>Binario</h2>
+    <form >
+        <label>Introduce el n&uacute;mero</label>
+        <input type="text" id="texto"name="numero" value="">
+        <button type="button" id="bin" onclick="conversion_bin(numero.value)">Convertir a binario</button>
+        <button type="button" onclick="limpiar()">Limpiar Todos</button>
+    </form>
+
+  </div>
+
+  <footer>
+    <button type="button" onclick="cierra()">Cerrar ventana</button>
+  </footer>  
+
+<script type="text/javascript" >
+    
+    function conversion_bin(numero){
+        var texto;
+        var bin;
+        var num = numero;
+            while(numero>0){
+                res=numero%2;
+                numero=(numero-res)/2;
+                texto=res.toString()+texto;
+            }
+        bin = parseInt(texto);
+        
+        parrafo = document.createElement("p");
+        contenido = document.createTextNode("El número "+num+" en binario es: "+bin);  
+        parrafo.appendChild(contenido);
+        document.getElementById("cuadro_binario").appendChild(parrafo);
+        document.getElementById("texto").value="";
+    }
+
+    function limpiar(){
+        lista=document.querySelectorAll('p');
+
+        if(lista.length!=0){
+            i=lista.length-1;
+            while(i>-1)
+            lista[i].parentNode.removeChild(lista[i--]);
+        }
+        else alert("No hay parrafos para eliminar");
+    }
+
+    function cierra(){
+		if (confirm("¿Estas seguro que quieres cerrar la ventana?")){
+			window.close();
+
+		}
+	}
+
+</script>
+</body>
+</html>
